@@ -141,6 +141,73 @@
         <!-- 文章标题 -->
         
     <h3 class="post-title">
+    	<a href="http://yoursite.com/2017/07/18/用html5-js实现浏览器全屏/">
+    		用html5 js实现浏览器全屏
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2017-07-18T07:18:38.000Z">2017-07-18</time>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var docElm = document.documentElement;</div><div class="line">//W3C  </div><div class="line">if (docElm.requestFullscreen) &#123;  </div><div class="line">    docElm.requestFullscreen();  </div><div class="line">&#125;</div><div class="line">//FireFox  </div><div class="line">else if (docElm.mozRequestFullScreen) &#123;  </div><div class="line">    docElm.mozRequestFullScreen();  </div><div class="line">&#125;</div><div class="line">//Chrome等  </div><div class="line">else if (docElm.webkitRequestFullScreen) &#123;  </div><div class="line">    docElm.webkitRequestFullScreen();  </div><div class="line">&#125;</div><div class="line">//IE11</div><div class="line">else if (elem.msRequestFullscreen) &#123;</div><div class="line">  elem.msRequestFullscreen();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="退出全屏"><a href="#退出全屏" class="headerlink" title="退出全屏"></a>退出全屏</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">if (document.exitFullscreen) &#123;  </div><div class="line">    document.exitFullscreen();  </div><div class="line">&#125;  </div><div class="line">else if (document.mozCancelFullScreen) &#123;  </div><div class="line">    document.mozCancelFullScreen();  </div><div class="line">&#125;  </div><div class="line">else if (document.webkitCancelFullScreen) &#123;  </div><div class="line">    document.webkitCancelFullScreen();  </div><div class="line">&#125;</div><div class="line">else if (document.msExitFullscreen) &#123;</div><div class="line">      document.msExitFullscreen();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="时间监听"><a href="#时间监听" class="headerlink" title="时间监听"></a>时间监听</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">document.addEventListener(&quot;fullscreenchange&quot;, function () &#123;  </div><div class="line">    fullscreenState.innerHTML = (document.fullscreen)? &quot;&quot; : &quot;not &quot;;&#125;, false);  </div><div class="line">   </div><div class="line">document.addEventListener(&quot;mozfullscreenchange&quot;, function () &#123;  </div><div class="line">    fullscreenState.innerHTML = (document.mozFullScreen)? &quot;&quot; : &quot;not &quot;;&#125;, false);  </div><div class="line">   </div><div class="line">document.addEventListener(&quot;webkitfullscreenchange&quot;, function () &#123;  </div><div class="line">    fullscreenState.innerHTML = (document.webkitIsFullScreen)? &quot;&quot; : &quot;not &quot;;&#125;, false);</div><div class="line">document.addEventListener(&quot;msfullscreenchange&quot;, function () &#123;</div><div class="line">    fullscreenState.innerHTML = (document.msFullscreenElement)? &quot;&quot; : &quot;not &quot;;&#125;, false);</div></pre></td></tr></table></figure>
+<h1 id="全屏样式"><a href="#全屏样式" class="headerlink" title="全屏样式"></a>全屏样式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">html:-moz-full-screen &#123;  </div><div class="line">    background: red;  </div><div class="line">&#125;  </div><div class="line">   </div><div class="line">html:-webkit-full-screen &#123;  </div><div class="line">    background: red;  </div><div class="line">&#125;  </div><div class="line">   </div><div class="line">html:fullscreen &#123;  </div><div class="line">    background: red;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+            
+            <p class="more">
+                <a href="http://yoursite.com/2017/07/18/用html5-js实现浏览器全屏/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://yoursite.com/2017/07/18/用html5-js实现浏览器全屏/" title="用html5 js实现浏览器全屏">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="//7xs305.com1.z0.glb.clouddn.com/thumbnail/8.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+    <p class="post-meta">
+        
+        评论：<a href="http://yoursite.com/2017/07/18/用html5-js实现浏览器全屏/#comments" class="post-comments">
+            <span 
+              lang="join-count" 
+              class="join-count" 
+              data-url="http://yoursite.com/2017/07/18/用html5-js实现浏览器全屏/" 
+              data-sourceId="用html5-js实现浏览器全屏"
+            >0</span>
+        </a>
+        
+        <!-- 标签 -->
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+
+<!-- JavaScript 配置 -->
+<script>
+  var yunTieProductKey = "c06bb9930e6f4b38a9997cb9bd17aba5";
+  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+</script>
+
+    
+        <!-- 文章 -->
+<article class="post">
+    <header>
+        
+            <a href="javascript: void(0);" class="cat">未分类</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
     	<a href="http://yoursite.com/2017/07/11/hello-world/">
     		Hello World
     	</a>
